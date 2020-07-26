@@ -38,7 +38,7 @@ class Jokesdataset(Dataset):
     self.tokenizer = tokenizer
     self.eos_tok = "<|endoftext|>"
     #Adding JOKE: at the start and EOS TOKEN at end
-    self.data['Joke'] = self.data['Joke'].apply(lambda x: "JOKE:" + str(x) + self.eos_tok)
+    self.data['text'] = self.data['text'].apply(lambda x: "SUMMARY:" + str(x) + self.eos_tok)
 
   def __len__(self):
     return len(self.data)
@@ -51,7 +51,8 @@ class Jokesdataset(Dataset):
             None,
             add_special_tokens = True,
             max_length = config.MAX_LEN,
-            pad_to_max_length = True
+            pad_to_max_length = True,
+            truncation = True
         )
 
     ids = inputs["input_ids"]
