@@ -1,7 +1,7 @@
 from transformers import GPT2Tokenizer
 
 
-BATCH_SIZE = 16
+BATCH_SIZE = 8
 EPOCHS = 4
 LEARNING_RATE = 2e-5
 MAX_LEN = 256
