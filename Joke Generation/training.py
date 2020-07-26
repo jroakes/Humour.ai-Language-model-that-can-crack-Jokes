@@ -32,9 +32,7 @@ model.resize_token_embeddings(len(config.Tokenizer))
 
 # Dataset
 class Jokesdataset(Dataset):
-    '''
-    This class builds the custom dataset for Dataloader
-    '''
+
   def __init__(self,data,tokenizer):
     self.data = data
     self.tokenizer = tokenizer
@@ -123,10 +121,6 @@ def run():
         if not os.path.exists(models_folder):
           os.mkdir(models_folder)
         # Saving Model after each Epoch
-        torch.save(model.state_dict(), os.path.join(models_folder, f"gpt2_joke_generator{epoch}.pt"))
-
-
-# BEGINNING TRAINING
-run()
+        torch.save(model.state_dict(), os.path.join(models_folder, f"gpt2_medium_model{epoch}.pt"))
 
 
