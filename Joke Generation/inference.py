@@ -104,6 +104,8 @@ def predict(length_of_joke,number_of_jokes, top_p = 0.10, top_k = 0):
                 output_text = config.Tokenizer.decode(output_list)
                 output_text = output_text.replace('<|endoftext|>', '').replace('SUMMARY:', '')
                 predicted_text.append(output_text)
-
+    
+    print()
+    print('Output:')
     print(' '.join(predicted_text))
 
