@@ -48,7 +48,7 @@ def predict(length_of_joke,number_of_jokes):
         
             joke_finished = False
 
-            cur_ids = torch.tensor(config.Tokenizer.encode('JOKE')).unsqueeze(0).to(device)
+            cur_ids = torch.tensor(config.Tokenizer.encode('SUMMARY')).unsqueeze(0).to(device)
 
             for i in range(length_of_joke):
                 outputs = model(cur_ids, labels=cur_ids)
@@ -75,5 +75,3 @@ def predict(length_of_joke,number_of_jokes):
 
                 print(output_text+'\n')
 
-# Start Predicting
-predict(64,5)
