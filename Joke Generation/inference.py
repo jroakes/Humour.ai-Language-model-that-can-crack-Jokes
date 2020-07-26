@@ -9,6 +9,7 @@ from transformers import GPT2LMHeadModel
 # Pytorch
 import torch
 import torch.nn as nn
+from torch.nn import functional as F
 
 #warnings
 import warnings
