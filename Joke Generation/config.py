@@ -2,7 +2,7 @@ from transformers import GPT2Tokenizer
 
 
 BATCH_SIZE = 4
-EPOCHS = 4
+EPOCHS = 8
 LEARNING_RATE = 2e-5
 MAX_LEN = 256
 TRAIN_PATH = "data.csv"  #ADD PATH TO YOUR DATASET HERE
