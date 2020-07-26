@@ -34,7 +34,7 @@ print('We have added', num_added_toks, 'tokens')
 model.resize_token_embeddings(len(config.Tokenizer)) 
 
 #loading Model State
-models_path = "gpt2_medium_model3.pt" # ADD PATH TO YOUR SAVED MODEL HERE
+models_path = "trained_models/gpt2_medium_model{}.pt".format(int(config.EPOCHS-1)) # ADD PATH TO YOUR SAVED MODEL HERE
 model.load_state_dict(torch.load(models_path))
 
 device='cuda'
